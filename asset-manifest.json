@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/dummy-cal-salaries/static/css/main.95f12525.css",
-    "main.js": "/dummy-cal-salaries/static/js/main.886367fa.js",
+    "main.css": "/dummy-cal-salaries/static/css/main.fba38273.css",
+    "main.js": "/dummy-cal-salaries/static/js/main.567d2457.js",
     "static/js/787.28cb0dcd.chunk.js": "/dummy-cal-salaries/static/js/787.28cb0dcd.chunk.js",
     "index.html": "/dummy-cal-salaries/index.html",
-    "main.95f12525.css.map": "/dummy-cal-salaries/static/css/main.95f12525.css.map",
-    "main.886367fa.js.map": "/dummy-cal-salaries/static/js/main.886367fa.js.map",
+    "main.fba38273.css.map": "/dummy-cal-salaries/static/css/main.fba38273.css.map",
+    "main.567d2457.js.map": "/dummy-cal-salaries/static/js/main.567d2457.js.map",
     "787.28cb0dcd.chunk.js.map": "/dummy-cal-salaries/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.95f12525.css",
-    "static/js/main.886367fa.js"
+    "static/css/main.fba38273.css",
+    "static/js/main.567d2457.js"
   ]
 }
