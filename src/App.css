@@ -1,6 +1,6 @@
 .container {
   width: 100%;
-  padding: 26px 26px;
+  padding: 26px 16px;
 }
 
 .name {
@@ -23,6 +23,7 @@ button {
 }
 
 .total {
+  margin-top: 12px;
   width: 100%;
 }
 
@@ -31,7 +32,6 @@ h4 {
 }
 
 .list {
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -39,4 +39,18 @@ h4 {
 
 .remove {
   margin-left: 12px;
+}
+
+.detail {
+  margin-top: 20px;
+}
+
+.reset {
+  margin-top: 26px;
+  width: 100%;
+  display: block;
+}
+
+.list1 span{
+  color: red;
 }
