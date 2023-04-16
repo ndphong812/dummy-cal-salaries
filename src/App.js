@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import "./App.css";
 import uuid from 'react-uuid';
+import numeral from 'numeral';
 
 const App = () => {
 
@@ -93,9 +94,11 @@ const App = () => {
             <input onChange={(e) => changeTotalDay(e)} value={totalDay} className='total' type='number' placeholder='Ngày công chuẩn' />
             <h4>Nhập nhân viên</h4>
             <div className='group'>
-                <input onChange={(e) => handleChangeName(e)} placeholder='Tên' value={name} type="text" />
-                <input onChange={(e) => handleChangeAbsent(e)} placeholder='Số ngày nghỉ' value={absent} type="number" />
-                <input onChange={(e) => handleChangePercent(e)} placeholder='% lương' value={percent} type="number" />
+                <div className='group-inputs'>
+                    <input className='input-name' onChange={(e) => handleChangeName(e)} placeholder='Tên' value={name} type="text" />
+                    <input className='input-absent' onChange={(e) => handleChangeAbsent(e)} placeholder='Số ngày nghỉ' value={absent} type="number" />
+                    <input className='input-salary' onChange={(e) => handleChangePercent(e)} placeholder='% lương' value={percent} type="number" />
+                </div>
                 <button onClick={() => handleSubmit()}>Thêm</button>
             </div>
             <div className='detail'>
@@ -142,9 +145,9 @@ const App = () => {
                                     name}
                                 {` = `}
                                 {`${totalSalary}/${total}*${totalDay - item.absent}*${item.percent / 100} = `}
-                                {(Math.round(item.
-
-                                    salary / 1000) * 1000).toLocaleString()}vnđ
+                                {
+                                    numeral((item.salary)).format('0,0')
+                                }vnđ
                                 <button className='remove' onClick={() => handleRemove(item.
 
                                     id)}>Xóa</button>
@@ -176,7 +179,9 @@ const App = () => {
                 {
                     list && list.length &&
                     <span>
-                        {Math.round(list.reduce((total, num) => total + num.salary, 0)).toLocaleString()}
+                        {
+                            numeral(list.reduce((total, num) => total + num.salary, 0)).format('0,0')
+                        }
                     </span>
                 }
             </div>
